@@ -5,6 +5,9 @@ from itertools import product as cartesian_product
 from matplotlib import pyplot as plt
 from numba import jit
 
+# read given J and h from csv files 
+J = n.genfromtxt('Js.csv',delimiter=',')
+h = n.genfromtxt('hs.csv',delimiter=',')
 
 def compute_prob_dist(J, h, N, q, n_procs=30):
     """Compute the probability distribtion over all states of given network
